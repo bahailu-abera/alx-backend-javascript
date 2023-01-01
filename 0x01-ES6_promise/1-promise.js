@@ -4,7 +4,7 @@ export default function getFullResponseFromAPI(success) {
       res({ status: 200, body: 'Success' });
     } else {
       // eslint-disable-next-line
-	rej('Error: The fake API is not working currently');
+	rej(new Error('The fake API is not working currently'));
     }
   });
 
