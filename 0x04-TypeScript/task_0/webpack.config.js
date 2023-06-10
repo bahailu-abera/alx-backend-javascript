@@ -20,10 +20,13 @@ module.exports = {
   resolve: {
     extensions: [".tsx", ".ts", ".js"]
   },
-  devServer: {
-    contentBase: "./dist"
+    devServer: {
+	host: "0.0.0.0",
+      contentBase: "./dist",
+      port: 80
   },
-  plugins: [
+
+    plugins: [
     new ForkTsCheckerWebpackPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
