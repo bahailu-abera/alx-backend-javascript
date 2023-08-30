@@ -69,8 +69,8 @@ async function handleStudentRoute(req, res) {
 
       responseMessage = responseMessage.join('\n');
     })
-    .catch((error) => {
-      responseMessage = error.toString();
+    .catch(() => {
+      responseMessage = 'This is the list of our students\nCannot load the database';
     });
 
   res.setHeader('Content-Length', responseMessage.length);
