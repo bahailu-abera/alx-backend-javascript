@@ -4,9 +4,6 @@ const app = express();
 const port = 1245;
 
 app.get('/', (req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'plain/text');
-
   res.send('Hello Holberton School!');
 });
 
