@@ -2,17 +2,10 @@ const readDatabase = require('../utils');
 
 class StudentsController {
   static format(fields) {
-    let count = 0;
+
     const keys = Object.keys(fields);
 
-    for (const field in fields) {
-      /* eslint-disable-next-line */
-      if (fields.hasOwnProperty(field)) {
-        count += fields[field].length;
-      }
-    }
-
-    let result = `Number of students: ${count}\n`;
+    let result = 'This is the list of our students\n';
 
     keys.sort((a, b) => a.localeCompare(b));
 
@@ -23,9 +16,7 @@ class StudentsController {
       }
     }
 
-    result = result.trim();
-
-    return result;
+    return result.trim();
   }
 
   static async getAllStudents(request, response) {
